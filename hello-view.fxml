@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="729.0" prefWidth="859.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csd214lab2kailash.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Text fill="#d31616" strokeType="OUTSIDE" strokeWidth="0.0" text="Kailash Karki">
+      <font>
+         <Font size="28.0" />
+      </font>
+   </Text>
+    <Button onAction="#onHelloButtonClick" text="Fetch" />
+   <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0">
+     <columns>
+       <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+       <TableColumn fx:id="bank" prefWidth="75.0" text="bank" />
+         <TableColumn fx:id="username" prefWidth="75.0" text="username" />
+         <TableColumn fx:id="password" prefWidth="75.0" text="password" />
+     </columns>
+   </TableView>
+
+    <Label fx:id="welcomeText" />
+   <Pane prefHeight="200.0" prefWidth="200.0">
+      <children>
+          <TextField layoutX="244.0" layoutY="-1.0" text="id" fx:id="xid" />
+
+         <TextField layoutX="244.0" layoutY="48.0" text="bank" fx:id="xbank" />
+         <TextField layoutX="244.0" layoutY="92.0" text="uname" fx:id="xusername" />
+          <TextField layoutX="251.0" layoutY="140.0" text="pass" fx:id="xpassword" />
+
+         <Text layoutX="180.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="password:" />
+         <Text layoutX="164.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="username:" />
+         <Text layoutX="195.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="bank:" />
+         <Text layoutX="198.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id:" wrappingWidth="27.6708984375" />
+      </children>
+   </Pane>
+   <Button mnemonicParsing="false" onAction="#InsertData" text="Insert" />
+   <Button mnemonicParsing="false" onAction="#UpdateData" text="Update" />
+   <Button mnemonicParsing="false" onAction="#DeleteData" text="Delete" />
+    <Button mnemonicParsing="false" onAction="#LoadData" text="Load data" />
+</VBox>
